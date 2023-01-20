@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 app.get('/', (req, res) => {
     console.log("Just got a request!")
-    res.send('Welcome To This Project')
+    res.send('Welcome To This Project Email Post Section Added')
 })
 
 app.post("/",(req,res)=>{

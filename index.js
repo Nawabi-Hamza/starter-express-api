@@ -4,6 +4,9 @@ app.get('/', (req, res) => {
     console.log("Just got a request!")
     res.send('Welcome To This Project Email Added')
 })
+app.get("/the",(req,res)=>{
+    res.send("The Section Fuk")
+})
 
 
 var contactMail = nodemailer.createTransport({
@@ -20,9 +23,6 @@ contactMail.verify((error)=>{
     }else{
         console.log("your message Send it")
     }
-})
-app.get("/the",(req,res)=>{
-    res.send("The Section Fuk")
 })
 app.post("/",(req,res)=>{
     // res.send("post methode") 

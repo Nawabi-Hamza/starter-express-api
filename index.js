@@ -2,9 +2,25 @@ const express = require('express')
 const app = express()
 app.get('/', (req, res) => {
     console.log("Just got a request!")
-    res.send('Welcome To This Project Email Post Section Added')
+    res.send('Welcome To This Project Email Added')
 })
 
+
+var contactMail = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+    user: 'hamza.nawabi119@gmail.com',
+    // pass: 'tvkfkmfywdghpvat'
+    pass:"kkmaxsjegmagwrmw"
+    }
+});
+contactMail.verify((error)=>{
+    if(error){
+        console.log(error)
+    }else{
+        console.log("your message Send it")
+    }
+})
 app.post("/",(req,res)=>{
     // res.send("post methode") 
     // var emailto =" hamza.nawabi119@gmail.com   "

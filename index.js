@@ -21,6 +21,9 @@ contactMail.verify((error)=>{
         console.log("your message Send it")
     }
 })
+app.get("/the",(req,res)=>{
+    res.send("The Section Fuk")
+})
 app.post("/",(req,res)=>{
     // res.send("post methode") 
     // var emailto =" hamza.nawabi119@gmail.com   "
